@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "mtkftx",
+    "mtkftx_common",
+]

@@ -3,3 +3,39 @@ members = [
     "mtkftx",
     "mtkftx_common",
 ]
+resolver = "2"
+default-members = ["neeml-common", "neeml"]
+
+[workspace.package]
+authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
+edition = "2021"
+license = "Apache-2.0"
+readme = "README.md"
+rust-version = "1.65.0"
+version = "0.1.0"
+
+[workspace.dependencies]
+anyhow = { version = "1.0.82" }
+thiserror = { version = "1.0.59" }
+
+[profile.dev]
+lto = true
+opt-level = 3
+codegen-units = 1
+debug = true
+
+[profile.dev.package."*"]
+codegen-units = 1
+opt-level = 3
+debug = true
+
+[profile.release]
+lto = true
+opt-level = 3
+codegen-units = 1
+debug = false
+
+[profile.release.package."*"]
+codegen-units = 1
+opt-level = 3
+debug = false

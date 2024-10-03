@@ -4,7 +4,7 @@ members = [
     "mtkftx_common",
 ]
 resolver = "2"
-default-members = ["neeml-common", "neeml"]
+default-members = ["mtkftx_common", "mtkftx"]
 
 [workspace.package]
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
